@@ -1,0 +1,10 @@
+modname                        = "swara"
+modlocation                    = "West Europe"
+modaccount_tier                = "Standard"
+modaccount_replication_type    = "GRS"
+modenabled_for_disk_encryption = true
+modsoft_delete_retention_days  = 7
+modpurge_protection_enabled    = false
+modsku_name                    = "standard"
+modos_type                     = "Windows"
+modservice_plan_sku_name       = "Y1"

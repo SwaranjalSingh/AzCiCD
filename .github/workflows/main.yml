@@ -1,0 +1,35 @@
+name: Terraform-Deploy-az
+on:
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terraform:
+    name: Terraform
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Configure Azure credentials
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.S }}
+      - name: Terraform Init
+        run: |
+          cd childmodule
+          terraform init
+      - name: Terraform Plan
+        run: |
+          cd childmodule
+          terraform plan
+      - name: Terraform Apply
+        run: |
+          cd childmodule
+          terraform apply -auto-approve
