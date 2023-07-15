@@ -20,7 +20,7 @@ jobs:
       - name: Configure Azure credentials
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Terraform Init
         run: |
           cd childmodule
