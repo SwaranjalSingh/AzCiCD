@@ -29,22 +29,22 @@ jobs:
           creds: '{"clientId":"${{ secrets.CLIENT_ID }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}"}'
       - name: Terraform Init
         run: |
-          cd ./childmodule
+          cd childmodule
           terraform init
       - name: Terraform Plan
         run: |
-          cd ./childmodule
+          cd childmodule
           terraform plan
       - name: Terraform Apply
         run: |
-          cd ./childmodule
+          cd childmodule
           terraform apply -auto-approve
    
-      - name: setup git config
-        run: |
-          git config --global user.name swaranjalsingh
-          git config --global user.email swaranjal3905@gmail.com
+#       - name: setup git config
+#         run: |
+#           git config --global user.name swaranjalsingh
+#           git config --global user.email swaranjal3905@gmail.com
 
-          git add terraform.tfstate
-          git commit -m "Updated websi"
-          git push 
+#           git add terraform.tfstate
+#           git commit -m "Updated websi"
+#           git push 
