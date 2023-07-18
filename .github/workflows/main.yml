@@ -20,7 +20,7 @@ jobs:
       - name: Configure Azure credentials
         uses: azure/login@v1
         with:
-          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}"}'
       - name: Terraform Init
         run: |
           cd childmodule
