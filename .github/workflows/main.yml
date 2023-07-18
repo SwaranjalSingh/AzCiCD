@@ -18,7 +18,7 @@ jobs:
         with: 
           repository: swaranjalsingh/AzCiCD
           ref: 'main'
-          token: ${{ secrets.dd }}
+          token: ${{ secrets.SWARA }}
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
