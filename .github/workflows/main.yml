@@ -33,7 +33,8 @@ jobs:
         run: |
           cd childmodule
           terraform apply -auto-approve
-      - name: vikrant
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           repository: swaranjalsingh/AzCiCD
           ref: 'main'
