@@ -9,7 +9,7 @@ permissions:
 jobs:
   terraform:
     name: Terraform
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -40,11 +40,11 @@ jobs:
           cd childmodule
           terraform apply -auto-approve
    
-#       - name: setup git config
-#         run: |
-#           git config --global user.name swaranjalsingh
-#           git config --global user.email swaranjal3905@gmail.com
+      - name: setup git config
+        run: |
+          git config --global user.name swaranjalsingh
+          git config --global user.email swaranjal3905@gmail.com
 
-#           git add terraform.tfstate
-#           git commit -m "Updated websi"
-#           git push 
+          git add terraform.tfstate
+          git commit -m "Updated websi"
+          git push 
