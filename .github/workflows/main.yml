@@ -45,6 +45,6 @@ jobs:
           git config --global user.name swaranjalsingh
           git config --global user.email swaranjal3905@gmail.com
 
-          git add .
+          git add ./childmodule
           git commit -m "Updated websi"
           git push 
