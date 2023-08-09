@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: vikrant
-        uses: actions/checkout@v2
-        with: 
-          repository: swaranjalsingh/AzCiCD
-          ref: 'main'
-          token: ${{ secrets.SWARA }}
+      # - name: vikrant
+      #   uses: actions/checkout@v2
+      #   with: 
+      #     repository: swaranjalsingh/AzCiCD
+      #     ref: 'main'
+      #       token: ${{ secrets.SWARA }} 
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
@@ -35,16 +35,16 @@ jobs:
         run: |
           cd childmodule
           terraform plan
-      - name: Terraform Apply
-        run: |
-          cd childmodule
-          terraform apply -auto-approve
+      # - name: Terraform Apply
+      #   run: |
+      #     cd childmodule
+      #     terraform apply -auto-approve
    
-      - name: setup git config
-        run: |
-          git config --global user.name swaranjalsingh
-          git config --global user.email swaranjal3905@gmail.com
+      # - name: setup git config
+      #   run: |
+      #     git config --global user.name swaranjalsingh
+      #     git config --global user.email swaranjal3905@gmail.com
 
-          git add terraform.tfstate
-          git commit -m "Updated websi"
-          git push 
+      #     git add terraform.tfstate
+      #     git commit -m "Updated websi"
+      #     git push 
